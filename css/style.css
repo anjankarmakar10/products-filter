@@ -1,0 +1,107 @@
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 38px;
+}
+main {
+  display: flex;
+  gap: 2rem;
+}
+
+input {
+  padding: 4px 8px;
+  border: 2px solid gainsboro;
+  border-radius: 4px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex: 1;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid gainsboro;
+  padding: 1rem;
+  border-radius: 4px;
+  min-width: 260px;
+  text-align: center;
+}
+.card-title {
+  font-size: 1.125rem;
+}
+.card-price-body {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.catagories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.catagories li {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.active {
+  background-color: rgb(169, 209, 250);
+  border-radius: 4px;
+}
+.range-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+input[type="range"] {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .catagories {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  input[type="range"] {
+    width: 100%;
+  }
+  .products {
+    justify-content: center;
+  }
+  .catagories li {
+    text-align: center;
+    width: 100%;
+  }
+}
